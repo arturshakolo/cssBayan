@@ -80,10 +80,10 @@ dd {
 }
 
 .fop-input:checked .fop-item {
- 
+  background-color: rgb(212, 209, 209);
 }
 
-.fop-input:checked .fop-title::after {
+.fop-input:checked:.fop-title::after {
   transform: rotate(180deg);
 }
 
