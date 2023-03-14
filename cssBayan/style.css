@@ -1,0 +1,210 @@
+body {
+  background-color: aliceblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.head-title-wraper {
+  width: 50%;
+  margin: 1vh auto;
+}
+
+.head-title {
+  margin-left: 8vh;
+  margin-top: 5vh;
+}
+
+.img-mem {
+  /*display: none;*/
+  margin: 1vh auto;
+  /*width: 13em;
+  height: 13em;*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all .6s;
+}
+.JUMP {
+  height: 0;
+  transition: all .6s; 
+  background-image: url(./assets/you-can-do-it-meme-1.jpeg);
+}
+.TIRED {
+  height: 0;
+  transition: all .6s; 
+  background-image: url(./assets/you-can-do-it-meme-2.jpeg); 
+}
+.DO-IT {
+  height: 0;
+  transition: all .6s; 
+  background-image: url(./assets/you-can-do-it-meme-3.jpeg); 
+}
+.MEME { 
+  height: 0;
+  transition: all .6s; 
+  background-image: url(./assets/you-can-do-it-meme-4.jpeg); 
+}
+
+.frequently-occurring-problems {
+  max-width: 80%;
+  margin: 10vh auto;
+}
+
+.fop-item {
+  border: 0.1em solid grey;
+  border-radius: 1vh;
+  margin-bottom: 0.1rem;
+}
+
+.fop-title {
+  border-radius: 3vh;
+  padding: 0rem 0.5rem 1rem 1rem; 
+  display: block;
+  font-size: 80%;
+  color: rgb(52, 65, 61); 
+}
+
+.fop-input:checked ~ .img-mem {
+  height: 13rem;
+  width: 13rem;
+  display: block;
+  transition: all .6s linear;
+}
+
+.fop-input:checked .fop-item {
+  background-color: rgb(212, 209, 209);
+}
+
+.fop-input {
+  appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.fop-title:active {
+  opacity: 0.5;
+}
+
+@media (min-width: 920px) and (max-width: 5920px) {
+  .frequently-occurring-problems {
+    max-width: 60%;
+  }
+
+  /*.fop-item:hover .fop-title::after {
+    transform: rotate(180deg);
+  }*/
+
+  .fop-item:hover > .fop-title {
+    color: rgb(231, 44, 44);
+  }
+
+  .fop-item:hover .img-mem {
+    height: 25rem;
+    width: 25rem;
+  } 
+
+  .frequently-occurring-problems:hover > .fop-item > .fop-title::after {
+    opacity: 1;
+  }
+
+  .frequently-occurring-problems:hover > .fop-item > .fop-title {
+    color: rgb(231, 44, 44);
+  }
+
+  .fop-title {
+    font-size: 150%;
+    cursor: pointer;
+  }
+
+  .fop-title::after {
+    content: "";
+    display: block;
+    opacity: 0;
+    margin-left: 94%;
+    margin-right: 5%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+
+    border-style: solid;
+    border-width: 18px 10px 0 10px;
+    border-color: #676262 transparent transparent transparent;
+  }
+
+  .fop-input:checked ~ .img-mem {
+    height: 25rem;
+    width: 25rem;
+  }
+
+  .fop-input:checked ~ .fop-title::after {
+    margin-left: 94%;
+    margin-right: 5%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+    
+    border-style: solid;
+    border-width: 0 10px 18px 10px;
+    border-color: transparent transparent #676262  transparent;
+  }
+
+  .fop-input:checked + .fop-title {
+    color: rgb(231, 44, 44);
+  }  
+  
+  .fop-item{
+    transition: 0.6s;
+    cursor: pointer;
+  }
+
+  /*.fop-item:hover {
+    background-color: rgb(212, 209, 209);
+  }
+
+  .img-mem {
+    width: 25em;
+    height: 25em;  
+  }*/
+
+  .head-title {
+    font-size: 300%;
+    margin-left: 40vh;
+    margin-top: 5vh;
+    margin-bottom: 0em;
+  }
+  
+}
+
+@media (min-width: 820px) and (max-width: 920px) {
+  .frequently-occurring-problems {
+    max-width: 70%;
+  }
+
+  .fop-title {
+    font-size: 130%;
+  }
+
+  .head-title {
+    font-size: 170%;
+    margin-left: 26vh;
+    margin-top: 5vh;
+  }
+
+}
